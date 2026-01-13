@@ -8,7 +8,7 @@
     * testing generate stats function with zeroes for mileage (miles are 0, 0, 0, or just 0)
     
     We need to add on:
-    * testing generate stats function on an empty input or None (should return zeroes)
+    * testing generate stats function on an empty input or None (should return None)
     * testing generate stats function on negative mileage (should raise an error)
 
     We also want to try testing another function in the starter file,
