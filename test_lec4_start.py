@@ -10,14 +10,19 @@
     We need to add on:
     * testing generate stats function on an empty input or None (should return zeroes)
     * testing generate stats function on negative mileage (should raise an error)
+
+    We also want to try testing another function in the starter file,
+    which prints a summary. The function prints, and doesn't return anything,
+    but we still need to test it :)
 '''
 
 import unittest
-from lec3_finished import generate_mileage_stats
+from lec4_start import generate_mileage_stats
 
 class TestRunners(unittest.TestCase):
     ''' test the functions defined in lec3_start '''
     def test_generate_stats_basic(self) -> None:
+        ''' test your everyday basic mileage '''
         test_dct = {"a" : 1.0, "b" : 2.0, "c" : 3.0}
         expected = {"total miles" : 6, "avg daily" : 2}
         
@@ -37,7 +42,7 @@ class TestRunners(unittest.TestCase):
         self.assertEqual(expected, generate_mileage_stats({"a" : 0.0, "b" : 0.0}))
     
     def test_generate_stats_empty(self) -> None:
-        ''' given an empty dictoinary for mileage or None, we should return a dictionary with zeroes '''
+        ''' given an empty dictionary for mileage or None, we should return None '''
         pass
                          
     def test_generate_stats_negative(self) -> None:
